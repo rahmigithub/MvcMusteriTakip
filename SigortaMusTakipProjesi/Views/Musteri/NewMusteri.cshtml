@@ -1,0 +1,47 @@
+﻿@model SigortaMusTakipProjesi.Models.Entity.Musteri
+@{
+    ViewBag.Title = "NewMusteri";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+
+    <div>
+
+        <label>Musteri Adı</label>
+
+        @Html.TextBoxFor(m => m.MusAdı, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MusAdı, "", new { @style = "color:red" })
+
+        <label>Musteri Soyadı</label>
+
+        @Html.TextBoxFor(m => m.MusSoyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MusSoyad, "", new { @style = "color:red" })
+
+        <label>Musteri İşyeri</label>
+
+        @Html.TextBoxFor(m => m.Isyeri, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Isyeri, "", new { @style = "color:red" })
+
+
+        <label>Adres</label>
+
+        @Html.TextBoxFor(m => m.Adres, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Adres, "", new { @style = "color:red" })
+
+
+        <label>Telefon</label>
+
+        @Html.TextBoxFor(m => m.Tel, new { @class = "form-control", type = "phone" })
+        @Html.ValidationMessageFor(m => m.Tel, "", new { @style = "color:red" })
+
+
+    </div>
+    <div style="margin-top:15px">
+
+        <button id="musteriEkle" class="btn btn-info">Musteri Ekle</button>
+    </div>
+
+
+</form>
+

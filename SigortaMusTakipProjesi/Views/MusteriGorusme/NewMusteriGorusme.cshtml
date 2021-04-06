@@ -1,0 +1,45 @@
+﻿@model SigortaMusTakipProjesi.Models.Entity.MusteriGorusme
+@{
+    ViewBag.Title = "NewMusteriGorusme";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+
+}
+<form class="form-group" method="post">
+
+    <div>
+
+        <label>GorusmeKonusu</label>
+
+        @Html.TextBoxFor(m => m.GorusmeKonusu, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.GorusmeKonusu, "", new { @style = "color:red" })
+
+
+
+        @Html.TextBoxFor(m => m.MusId,
+
+       new {
+           @class = "form-control",
+
+           @readonly = "true",
+           @Value = @ViewBag.musId
+
+           //htmlAttributes: new 
+           //{ 
+           //    @Value = @ViewBag.musId
+           //    } 
+       })
+
+
+
+
+    </div>
+    <div style="margin-top:15px">
+
+        <button id="musteriGorusmeEkle" class="btn btn-info">Musteri Gorusme Ekle</button>
+    </div>
+
+
+</form>
+
+

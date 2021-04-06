@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "MusteriDetay";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h4>
+    Müşteri :  @ViewBag.MusteriBilgileri
+</h4>
+
+<table id="tbl1" class="table table-bordered">
+
+    <thead>
+
+        <tr>
+            <th>Görüşme Id</th>
+            <th>Görüşme Konusu</th>
+            <th>Görüşme Tarihi </th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var mustGorustme in Model)
+        {
+        <tr>
+            @if (mustGorustme.IsActive == false)
+            {
+                <td style="background-color:lightcoral">@mustGorustme.Id</td>
+            }
+            else
+            {
+                <td>@mustGorustme.Id</td>
+            }
+            <td>@mustGorustme.GorusmeKonusu</td>
+            <td>@mustGorustme.GorusmeTarihi.ToString("dd-MM-yyyy")</td>
+
+            <td><a href="/MusteriGorusme/DELETE/@mustGorustme.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/MusteriGorusme/FindMusteriGorusme/@mustGorustme.Id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+        }
+
+
+
+    </tbody>
+    <a href="/MusteriGorusme/NewMusteriGorusme/@ViewBag.MusteriId" class="btn btn-primary">YENİ GORUSME EKLE</a>
+</table>
+
+@*<a href="/MusteriGorusme/NewMusteriGorusme/@ViewBag.MusteriId" class="btn btn-primary">YENİ GORUSME EKLE</a>*@
+
