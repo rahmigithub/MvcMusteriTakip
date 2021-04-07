@@ -1,0 +1,26 @@
+Proje Yapım Aşaması
+
+-Veritabanı oluşturuldu.
+-Asp.net Mvc projesi oluşruldu.
+-Model için DatabaseFirst kullanıldı.
+-EntityFramework,Bootstrap teknolojiler kullanıldı.
+-Backend tarafı  3 katmana ayrıldı : 
+
+1-Interface : Iprocess adında interface oluşturulup proje içinde kullanılacak 
+methodların imzaları oluşturuldu.
+
+2-BusinessProcess : Her Modele ait class oluşturulup, oluşturulan 
+class Iprocess interface'nden extend edilip,implement edilen methodların
+gerekli kod blokları yazıldı.
+
+3-Controller : View tarafı ile veri alışverişi sağlandı.
+
+
+-Ekstralar: 
+ - Silme işlemi yerine isActive mantığı kullanıldı.
+ - Tarih işlemlerinde jquery-ui teknolojisi kullanıldı.
+
+-Tamamlanmamış işlemler: 
+ - Validation kontrol işlemlerine başlanmadı.
+ - JavaScript ile kullanıcının yapacağı işlemler öncesi uyarılar oluşturulmadı.  
+   
